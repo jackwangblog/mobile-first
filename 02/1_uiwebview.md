@@ -1,7 +1,4 @@
-#移动前端需要了解的WebView
-##iOS WebView
-WebView是什么？我们打开支付宝，可以看到很多第三方的页面，这就是WebView容器。     
-很多时候移动前端更多的是和WebView打交道，那么就十分有必要了解WebView的一些特性和工作方式。我们不需要做到向Native开发那样精通，但是可以做到能够掌握基本原理。        
+        
 ###一、UIWebView      
 UIWebView是iOS的基本组件，能够使我们App包含和展示Web网页。一般情况下，我们创建一个UIWebView的实例，然后将UIWebView实例添加到当前父容器对象上，最后发送一个请求去加载网页实体。我们还可以通过UIWebView来控制网页的回退和前进，甚至可以设置网页相关的内容属性。     
  
@@ -173,26 +170,3 @@ UIWebView提供了很多使用的方法和属性。
 这里我们用到了stringByEvaluatingJavaScriptFromString函数，可以将JavaScript代码作为字符串传入。为了更加直观的表现，这里获取文档的标题。代码运行效果如图2-3所示：      
 ![](./imgs/2-3.png)          
 图2-3 百度M站首页              	
-	   
-###2.2 WKWebView     
-在iOS 8及其以后的版本，建议使用WKWebView代替UIWebView，这样性能更高，加载速度提升了，内存反而降低了。所以苹果建议开发者使用WKWebView代替UIWebView。    
-            
-####2.2.1 WKWebView加载网页 
-      
-	WKWebView *webView = [[WKWebView alloc]initWithFrame:self.view.bounds];
-	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://m.baidu.com/"]]];
-	[self.view addSubview:webView];     
-
-####2.2.2 WKNavigationDelegate协议     
-
-####2.2.3 WKUIDelegate
-
-####2.2.4 WKScriptMessageHandler
-
-####2.2.5 WKWebView加载JS
-
- 
-###2.3 Javascript Bridge         
-  
-###2.4 JavaScript Core         
-
